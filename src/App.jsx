@@ -64,11 +64,14 @@ function App() {
 			
 		};
 		let layout = {
-			color: "red",
+			font:{
+			    size:12,
+				color: "white",
+			},
 			autosize: true,
 			height: "100%",
-			// plot_bgcolor:"black",
-			// paper_bgcolor:"black",
+			plot_bgcolor:"black",
+			paper_bgcolor:"black",
 			margin: {
 				l: 50,
 				r: 20,
@@ -115,12 +118,12 @@ function App() {
 	};
 
 	return (
-		<div className='px-3 mt-1'>
+		<div className='px-3 mt-1 bg-black'>
 			{isLoading ? (
 				<h6 className='value animate__animated animate__flash animate__slow text-center text-primary'> loading ...</h6>
 			) : (
 				<>
-					<h2 id='last-price' className='text-center text-primary animate__animated '>
+					<h2 id='last-price' className='text-center text-white animate__animated '>
 						$ {latestPrice}
 					</h2>
 					<div id='chart' className='p-0 m-0'></div>
