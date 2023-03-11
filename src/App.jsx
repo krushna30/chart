@@ -75,8 +75,8 @@ function App() {
       },
       autosize: true,
       height: "100%",
-      plot_bgcolor: "black",
-      paper_bgcolor: "black",
+      plot_bgcolor: "rgb(24,25,24)",
+      paper_bgcolor: "#181918",
       margin: {
         l: 50,
         r: 20,
@@ -123,8 +123,8 @@ function App() {
   };
 
   return (
-    <div className="bg-dark">
-      <div className="px-3 mt-1 bg-dark">
+<div className="bg-{rgb(24,25,24)}">
+      <div className="px-3 mt-1 bg-{rgb(24,25,24)}">
         {isLoading ? (
           <h6 className="value animate__animated animate__flash animate__slow text-center text-primary">
             {" "}
@@ -134,7 +134,7 @@ function App() {
           <>
             <h2
               id="last-price"
-              class="text-center text-white animate__animated bg-dark"
+              class="text-center text-white animate__animated bg-{rgb(24,25,24)}"
             >
               $ {latestPrice}
             </h2>
