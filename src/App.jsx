@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import callAPI from "./utils";
+import "./demo.css";
 
 function App() {
 	const [isLoading, setIsLoading] = useState(true);
@@ -38,28 +39,35 @@ function App() {
 			name: "Price ($)",
 			x: data.index.map((t) => new Date(t)),
 			y: data.price,
+			
 			xaxis: "x",
 			yaxis: "y1",
 			type: "scatter",
 			mode: "lines+markers",
-			marker: { color: "blue", size: 3 },
+			marker: { color: "#2952e3", size: 3 },
+			// marker colour blue
 		};
 		let trace_volumes = {
 			name: "Volumne ($B)",
 			x: data.index.map((t) => new Date(t)),
 			y: data.volumes,
+			
 			xaxis: "x",
 			yaxis: "y2",
 			type: "bar",
 			barmode: "relative",
 			marker: {
-				color: "rgb(49,130,189)",
+				color: "#2952e3",   
+				//down element colour
 				opacity: 0.7,
 			},
+			
 		};
 		let layout = {
 			autosize: true,
 			height: "100%",
+			// plot_bgcolor:"black",
+			// paper_bgcolor:"black",
 			margin: {
 				l: 50,
 				r: 20,
@@ -111,7 +119,7 @@ function App() {
 				<h6 className='value animate__animated animate__flash animate__slow text-center text-primary'> loading ...</h6>
 			) : (
 				<>
-					<h2 id='last-price' className='text-center text-primary animate__animated'>
+					<h2 id='last-price' className='text-center text-primary animate__animated '>
 						$ {latestPrice}
 					</h2>
 					<div id='chart' className='p-0 m-0'></div>
