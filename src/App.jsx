@@ -64,6 +64,7 @@ function App() {
 			
 		};
 		let layout = {
+			color: "red",
 			autosize: true,
 			height: "100%",
 			// plot_bgcolor:"black",
